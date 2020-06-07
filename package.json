@@ -1,0 +1,35 @@
+{
+  "name": "microservice",
+  "version": "1.0.0",
+  "description": "Framework for create microservices application",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "ts-mocha test/*.spec.ts",
+    "format": "prettier --write \"src/**/*.ts\" && git add .",
+    "lint": "tslint -p tsconfig.json --fix",
+    "build": "rm -rf lib && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/nm-groups/microservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/nm-groups/microservice/issues"
+  },
+  "homepage": "https://gitlab.com/nm-groups/microservice#readme",
+  "dependencies": {
+    "amqplib": "^0.5.6"
+  },
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.9",
+    "prettier": "^2.0.5",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "tslint-no-unused-expression-chai": "^0.1.4",
+    "typescript": "^3.9.5"
+  }
+}
