@@ -6,8 +6,18 @@
     "outDir": "./lib",
     "strict": true,
     "downlevelIteration": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "typeRoots": [
+      "node_modules/@types",
+      "@types"
+    ],
+    "baseUrl": "src",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
   "include": [
+    "@types",
     "src"
   ],
   "exclude": [
