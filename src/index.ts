@@ -1,1 +1,6 @@
-export default 1;
+import MicroService from './MicroService';
+import Gateway from './Gateway';
+
+export { Gateway };
+
+export default MicroService;

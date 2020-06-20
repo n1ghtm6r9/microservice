@@ -1,6 +1,15 @@
 import { connect as amqpConnect, Connection } from 'amqplib';
-// types
-import { IAmqp, IAmqpOptions } from '@nm/micriservice';
+
+export interface IAmqp {
+  reqName: string;
+  resName: string;
+  options: IAmqpOptions;
+}
+
+export interface IAmqpOptions {
+  name: string;
+  url: string;
+}
 
 export default class AmqpApp implements IAmqp {
   reqName: string;

@@ -1,9 +1,19 @@
-import { IMicroService, IMicroServiceOptions } from '@nm/micriservice';
+import ConnectionHelper, {
+  IConnection,
+  IConnectionOptions,
+} from './helpers/ConnectionHelper';
 
-export default class MicroService implements IMicroService {
-  options: IMicroServiceOptions;
+export interface IMicroServiceOptions {
+  name: string;
+  connection: IConnectionOptions;
+}
 
-  constructor(options: IMicroServiceOptions) {
-    this.options = options;
+export default class MicroService {
+  private _name: string;
+  private _connection: IConnection;
+
+  constructor({ name, connection }: IMicroServiceOptions) {
+    this._name = name;
+    this._connection = ConnectionHelper.validateConnection(connection);
   }
 }

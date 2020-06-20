@@ -1,2 +1,4 @@
-declare const _default: 1;
-export default _default;
+import MicroService from './MicroService';
+import Gateway from './Gateway';
+export { Gateway };
+export default MicroService;
